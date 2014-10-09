@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	float a,b,c,d;
+	cout<<"请依次输入24个大小1-13的数字"<<endl;
+	cout<<"输入第台一个?数字?"<<endl;
+	cin>>a;
+	cout<<"输入第台二个?数字?"<<endl;
+	cin>>b;
+	cout<<"输入第台三个数字?"<<endl;
+	cin>>c;
+	cout<<"输入第台四个数字?"<<endl;
+	cin>>d;
+	if((a<0)||(a>13)||(b<0)||(b>13)||(c<0)||(c>13)||(d<0)||(d>13))
+	{
+		cout<<"输的数字有误"<<endl;
+	}
+	int jisuan(float x,float y,float r,float s);
+	cout<<"计?算?结á果?为a"<<endl;
+	jisuan(a,b,c,d);jisuan(a,b,d,c);jisuan(a,c,b,d);jisuan(a,c,d,b);
+	jisuan(a,d,b,c);jisuan(a,d,c,b);jisuan(b,a,c,d);jisuan(b,a,d,c);
+	jisuan(b,c,a,d);jisuan(b,c,d,a);jisuan(b,d,a,c);jisuan(b,d,c,a);
+	jisuan(c,a,b,d);jisuan(c,a,d,b);jisuan(c,b,a,d);jisuan(c,b,d,a);
+	jisuan(c,d,a,b);jisuan(c,d,b,a);jisuan(d,a,b,c);jisuan(d,a,c,b);
+	jisuan(d,b,a,c);jisuan(d,b,c,a);jisuan(d,c,a,b);jisuan(d,c,b,a);
+	return 0;
+}
+int jisuan(float x,float y,float z,float w)
+{
+	 if (x+y+z+w==24) cout<<x<<"+"<<y<<"+"<<z<<"+"<<w<<"=24"<<endl;  
+	 else if (x+y+z-w==24) cout<<x<<"+"<<y<<"+"<<z<<"-"<<w<<"=24"<<endl; 
+	 else if (x+y-z-w==24) cout<<x<<"+"<<y<<"-"<<z<<"-"<<w<<"=24"<<endl; 
+	 else if ((x+y)*(z+w)==24) cout<<"("<<x<<"+"<<y<<")*("<<z<<"+"<<w<<")=24"<<endl;  
+	 else if ((x-y)*(z+w)==24) cout<<"("<<x<<"-"<<y<<")*("<<z<<"+"<<w<<")=24"<<endl;  
+     else if ((x-y)*(z-w)==24) cout<<"("<<x<<"-"<<y<<")*("<<z<<"-"<<w<<")=24"<<endl;  
+	 else if ((x+y+z)*w==24) cout<<"("<<x<<"+"<<y<<"+"<<z<<")*"<<w<<"=24"<<endl;  
+	 else if ((x-y-z)*w==24) cout<<"("<<x<<"-"<<y<<"-"<<z<<")*"<<w<<"=24"<<endl;  
+     else if ((x+y-z)*w==24) cout<<"("<<x<<"+"<<y<<"-"<<z<<")*"<<w<<"=24"<<endl;  
+     else if ((x*y*z)/w==24) cout<<"("<<x<<"*"<<y<<"*"<<z<<")/"<<w<<"=24"<<endl;  
+     else if ((x*y)*(z+w)==24) cout<<"("<<x<<"*"<<y<<")*("<<z<<"+"<<w<<")=24"<<endl;  
+     else if ((x*y)*(z-w)==24) cout<<"("<<x<<"*"<<y<<")*("<<z<<"-"<<w<<")=24"<<endl;  
+     else if ((x*y)*z-w==24) cout<<"("<<x<<"*"<<y<<")*("<<z<<")-"<<w<<"=24"<<endl;  
+     else if ((x*y)*z+w==24) cout<<"("<<x<<"*"<<y<<")*("<<z<<")+"<<w<<"=24"<<endl;  
+     else if (x*y*z*w==24) cout<<x<<"*"<<y<<"*"<<z<<"*"<<w<<"=24"<<endl;  
+     else if ((x+y)+(z/w)==24) cout<<"("<<x<<"+"<<y<<")+("<<z<<"/"<<w<<")"<<"=24"<<endl;  
+     else if ((x+y)*(z/w)==24) cout<<"("<<x<<"+"<<y<<")*("<<z<<"/"<<w<<")"<<"=24"<<endl;  
+     else if ((x*y)+z+w==24) cout<<"("<<x<<"*"<<y<<")+"<<z<<"+"<<w<<"=24"<<endl;  
+     else if ((x*y)+z-w==24) cout<<"("<<x<<"*"<<y<<")+"<<z<<"-"<<w<<"=24"<<endl;  
+     else if ((x*y)-(z/w)==24) cout<<"("<<x<<"*"<<y<<")-("<<z<<"/"<<w<<")"<<"=24"<<endl;  
+     else if ((x*y)+(z/w)==24) cout<<"("<<x<<"*"<<y<<")-("<<z<<"/"<<w<<")"<<"=24"<<endl;  
+     else if ((x*y)-z-w==24) cout<<"("<<x<<"*"<<y<<")-"<<z<<"-"<<w<<"=24"<<endl;  
+     else if ((x*y)+(z*w)==24) cout<<"("<<x<<"*"<<y<<")+("<<z<<"*"<<w<<")"<<"=24"<<endl;  
+     else if ((x*y)-(z*w)==24) cout<<"("<<x<<"*"<<y<<")-("<<z<<"*"<<w<<")"<<"=24"<<endl;  
+     else if ((x*y)/(z*w)==24) cout<<"("<<x<<"*"<<y<<")/("<<z<<"*"<<w<<")"<<"=24"<<endl;  
+     else if ((x*y)/(z-w)==24) cout<<"("<<x<<"*"<<y<<")/("<<z<<"-"<<w<<")"<<"=24"<<endl;  
+     else if ((x*y)/(z+w)==24) cout<<"("<<x<<"*"<<y<<")/("<<z<<"+"<<w<<")"<<"=24"<<endl;  
+	 
+	 
+	 return 0;
+}
